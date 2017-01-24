@@ -4,12 +4,12 @@
     <meta charset='utf-8'>
     <meta content='width=device-width' name='viewport'>
     <title>Webmil - Contacts</title>
-    <link href="/images/favicon.png" rel="icon" type="image/png" />
+    <link href="../images/favicon.png" rel="icon" type="image/png" />
     <link href='https://plus.google.com/105004848481490299912' rel='publisher'>
-    <link href="/stylesheets/all.css" rel="stylesheet" />
+    <link href="../stylesheets/all.css" rel="stylesheet" />
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800&amp;subset=latin,cyrillic-ext" rel="stylesheet" />
   </head>
-  <body class='contacts contacts_index'>
+  <body class='contacts'>
     <div class='wrap'>
       <header class='main-header js-header'>
         <div class='clearfix'>
@@ -22,10 +22,10 @@
                 <a class='projects-link' href='/#projects'>works</a>
               </li>
               <li id='studio'>
-                <a class="" page="/contacts/" href="/studio/">Studio</a>
+                <a href="/studio/" class="" page="/contacts/">Studio</a>
               </li>
               <li>
-                <a class="active" page="/contacts/" href="/contacts/">contacts</a>
+                <a href="/contacts/" class="" page="/contacts/">contacts</a>
               </li>
               <li>
                 <a class='facebook' href='https://www.facebook.com/webmileu'></a>
@@ -94,8 +94,8 @@
         </div>
       </footer>
     </div>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="/javascripts/all.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="../javascripts/all.js"></script>
     <script>
       <!-- Yandex.Metrika counter -->
       (function (d, w, c) {
@@ -107,14 +107,14 @@
                           accurateTrackBounce:true});
               } catch(e) { }
           });
-
+      
           var n = d.getElementsByTagName("script")[0],
               s = d.createElement("script"),
               f = function () { n.parentNode.insertBefore(s, n); };
           s.type = "text/javascript";
           s.async = true;
           s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
-
+      
           if (w.opera == "[object Opera]") {
               d.addEventListener("DOMContentLoaded", f, false);
           } else { f(); }
