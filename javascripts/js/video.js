@@ -1,0 +1,1 @@
+$(document).ready(function(){new $.backgroundVideo($("#back-video"),{align:"centerXY",width:1280,height:720,path:"/media/",filename:"zeppelin",types:["mp4","webm"]})});
