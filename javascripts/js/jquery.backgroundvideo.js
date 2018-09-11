@@ -1,0 +1,8 @@
+/*
+* jQuery Background video plugin for jQuery
+* ---
+* Copyright 2011, Victor Coulon (http://victorcoulon.fr)
+* Released under the MIT, BSD, and GPL Licenses.
+* based on jQuery Plugin Boilerplate 1.3
+*/
+!function(t){t.backgroundVideo=function(e,i){var n={videoid:"video_background"},o=this;o.settings={};var d=function(){o.settings=t.extend({},n,i),o.el=e,s()},s=function(){var e="";e+='<video id="'+o.settings.videoid+'" preload="auto" loop="loop" muted="muted" autoplay="" poster="media/cloud.jpg"',o.settings.poster&&(e+=' poster="'+o.settings.poster+'" '),e+='style="display:none;position:fixed;top:0;left:0;bottom:0;right:0;z-index:-100;width:100%;height:100%;">';for(var i=0;i<o.settings.types.length;i++)e+='<source src="'+o.settings.path+o.settings.filename+"."+o.settings.types[i]+'" type="video/'+o.settings.types[i]+'" />';e+='<img src="media/cloud.jpg" height="100%" />',e+="bgvideo</video>",o.el.prepend(e),o.videoEl=document.getElementById(o.settings.videoid),o.$videoEl=t(o.videoEl),o.$videoEl.fadeIn(2e3),g()},g=function(){var t=l();o.$videoEl.width(t*o.settings.width),o.$videoEl.height(t*o.settings.height),"undefined"!=typeof o.settings.align&&h()},l=function(){var e=t(window).width(),i=t(window).height(),n=e/i,d=o.settings.width/o.settings.height,s=i/o.settings.height;return n>=d&&(s=e/o.settings.width),s},h=function(){var e=(t(window).width()>>1)-(o.$videoEl.width()>>1)|0,i=(t(window).height()>>1)-(o.$videoEl.height()>>1)|0;return"centerXY"==o.settings.align?void o.$videoEl.css({left:e,top:i}):"centerX"==o.settings.align?void o.$videoEl.css("left",e):"centerY"==o.settings.align?void o.$videoEl.css("top",i):void 0};d(),t(window).resize(function(){g()}),o.$videoEl.bind("ended",function(){this.play()})}}(jQuery);
